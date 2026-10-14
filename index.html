@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogo da Memória - Arte 6º Ano</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="background-shapes">
+    <div class="shape shape1"></div>
+    <div class="shape shape2"></div>
+    <div class="shape shape3"></div>
+    <div class="shape shape4"></div>
+  </div>
+
+  <header>
+    <h1>🎨 Jogo da Memória</h1>
+    <p class="subtitle">Arte • 6º Ano</p>
+  </header>
+
+  <main>
+    <!-- Tela Inicial -->
+    <section id="start-screen" class="screen active">
+      <div class="card-box">
+        <div class="big-emoji">🎭🎨🎵💃</div>
+        <h2>Vamos jogar?</h2>
+        <p>Encontre os pares sobre Arte!</p>
+        <p class="hint">Clique em duas cartas iguais para marcar ponto.</p>
+        <button id="btn-start" class="btn btn-primary">Começar!</button>
+      </div>
+    </section>
+
+    <!-- Tela do Jogo -->
+    <section id="game-screen" class="screen">
+      <div class="info-bar">
+        <div class="info-item">
+          <span class="info-label">Pares</span>
+          <span id="score">0</span>/<span id="total-pairs">12</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">Jogadas</span>
+          <span id="moves">0</span>
+        </div>
+        <button id="btn-restart" class="btn btn-small">🔄 Reiniciar</button>
+      </div>
+
+      <div id="board" class="board"></div>
+    </section>
+
+    <!-- Tela de Vitória -->
+    <section id="win-screen" class="screen">
+      <div class="card-box win-box">
+        <div class="big-emoji">🏆🎉</div>
+        <h2>Parabéns!</h2>
+        <p>Você encontrou todos os pares!</p>
+        <div class="final-stats">
+          <p>Jogadas: <strong id="final-moves">0</strong></p>
+          <p>Tempo: <strong id="final-time">0s</strong></p>
+        </div>
+        <button id="btn-play-again" class="btn btn-primary">Jogar de novo</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Feito para alunos do 6º ano • Arte</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
